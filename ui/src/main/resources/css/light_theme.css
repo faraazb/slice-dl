@@ -1,0 +1,10 @@
+.main-window .add-url-button {
+    -fx-pref-height: 30px;
+    -fx-pref-width: 30px;
+    -fx-background-color: none;
+    -fx-padding: 0;
+}
+
+.main-window .tool-bar {
+    -fx-background-color: none;
+}

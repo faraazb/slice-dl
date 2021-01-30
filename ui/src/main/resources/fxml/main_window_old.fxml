@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--<AnchorPane xmlns="http://javafx.com/javafx"-->
+<!--            xmlns:fx="http://javafx.com/fxml"-->
+<!--            fx:controller="ui.mainwindow.MainWindowController"-->
+<!--            prefHeight="400.0" prefWidth="600.0">-->
+
+<!--</AnchorPane>-->
+<?import ui.common.IconView?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:id="root"
+           fx:controller="ui.mainwindow.MainWindowController"
+           styleClass="main-window">
+    <VBox>
+        <HBox >
+            <Label text="SLICE-DL"/>
+        </HBox>
+        <HBox>
+            <VBox >
+                <TextField promptText="Enter a direct URL to video "/>
+                <HBox >
+                    <Label text="Start" />
+                    <Label text="End" />
+                </HBox>
+            </VBox>
+            <fx:include source="/fxml/main_window_toolbar.fxml" />
+        </HBox>
+        <StackPane VBox.vgrow="ALWAYS">
+            <SplitPane dividerPositions="0.33" >
+<!--                HERE COMES DOWNLOAD CATEGORIES (l) AND FILE LIST(r)-->
+            </SplitPane>
+
+<!--            <VBox styleClass="drag-n-drop-indicator" visible="${controller.draggingOver}" alignment="TOP_CENTER">-->
+<!--                <HBox visible="${!controller.draggingVaultOver}" managed="${!controller.draggingVaultOver}" spacing="6" styleClass="drag-n-drop-header" alignment="CENTER" VBox.vgrow="NEVER">-->
+<!--                    <IconView glyph="EXCLAMATION_TRIANGLE"/>-->
+<!--                    <Label text="%main.dropZone.unknownDragboardContent"/>-->
+<!--                </HBox>-->
+<!--                <HBox visible="${controller.draggingVaultOver}" managed="${controller.draggingVaultOver}" spacing="6" styleClass="drag-n-drop-header" alignment="CENTER" VBox.vgrow="NEVER">-->
+<!--                    <IconView glyph="CHECK"/>-->
+<!--                    <Label text="%main.dropZone.dropUrl"/>-->
+<!--                </HBox>-->
+<!--                <Region VBox.vgrow="ALWAYS"/>-->
+<!--            </VBox>-->
+
+        </StackPane>
+    </VBox>
+</StackPane>
