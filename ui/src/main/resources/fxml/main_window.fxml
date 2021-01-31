@@ -23,7 +23,7 @@
                     <children>
                         <VBox spacing="5.0">
                             <children>
-                                <fx:include source="main_window_toolbar.fxml" VBox.vgrow="NEVER" />
+                                <fx:include source="main_window_toolbar.fxml" />
                                 <fx:include source="main_window_table.fxml" />
                                 <fx:include source="main_window_progress.fxml" />
                             </children>

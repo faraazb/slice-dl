@@ -1,11 +1,17 @@
 package ui.download;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.util.converter.LocalTimeStringConverter;
 
 import java.io.IOException;
+import java.time.LocalTime;
+import java.time.format.FormatStyle;
 import java.util.ResourceBundle;
 
 public class Download {
@@ -16,6 +22,7 @@ public class Download {
         Stage downloadStage = new Stage();
         downloadStage.setScene(scene);
         downloadStage.setResizable(false);
+        downloadStage.setTitle("Download Options");
         downloadStage.show();
     }
 

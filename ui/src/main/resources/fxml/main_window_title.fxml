@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
+<?import ui.common.IconView?>
 <HBox xmlns:fx="http://javafx.com/fxml"
       xmlns="http://javafx.com/javafx"
       fx:id="titleBar"
@@ -33,6 +34,14 @@
                 <Region prefHeight="200.0" prefWidth="200.0" />
             </children>
         </AnchorPane>
-        <Button mnemonicParsing="false" text="Button" />
+        <Button fx:id="closeButton" contentDisplay="GRAPHIC_ONLY" styleClass="add-url-button" onAction="#close" focusTraversable="false" mnemonicParsing="false" >
+            <graphic>
+                    <IconView glyph="TIMES" glyphSize="20"/>
+            </graphic>
+            <tooltip>
+                <Tooltip text="%main.addURL.tooltip" />
+            </tooltip>
+        </Button>
+<!--        <Button mnemonicParsing="false" text="Button" />-->
     </children>
 </HBox>

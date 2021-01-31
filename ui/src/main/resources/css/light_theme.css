@@ -1,10 +1,15 @@
 .main-window .add-url-button {
+    -fx-padding: 0;
     -fx-pref-height: 30px;
     -fx-pref-width: 30px;
     -fx-background-color: none;
-    -fx-padding: 0;
+    -fx-background-size: 0;
 }
 
 .main-window .tool-bar {
     -fx-background-color: none;
+}
+
+.main-window .tool-bar .add-url-button .glyph-icon {
+    /*-fx-fill: white;*/
 }

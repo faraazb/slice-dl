@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import ui.common.IconView?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER_LEFT"
+      maxHeight="30.0" minHeight="30.0"
+      prefHeight="30.0" prefWidth="650.0"
+      spacing="4.0" styleClass="tool-bar"
+      VBox.vgrow="NEVER"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.mainwindow.MainWindowToolbarController">
+    <children>
+                <Button contentDisplay="GRAPHIC_ONLY" focusTraversable="false" mnemonicParsing="false" onAction="#download" styleClass="add-url-button">
+                    <graphic>
+                        <StackPane>
+                            <IconView glyph="PLUS2" glyphSize="20"/>
+                        </StackPane>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%main.addURL.tooltip" />
+                    </tooltip>
+                </Button>
+                <Button contentDisplay="GRAPHIC_ONLY" focusTraversable="false" mnemonicParsing="false" onAction="#download" styleClass="add-url-button">
+                    <graphic>
+                        <StackPane>
+                            <IconView glyph="RESUME" glyphSize="20"/>
+                        </StackPane>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%main.addURL.tooltip" />
+                    </tooltip>
+                </Button>
+                <Button contentDisplay="GRAPHIC_ONLY" focusTraversable="false" mnemonicParsing="false" onAction="#download" styleClass="add-url-button">
+                    <graphic>
+                        <StackPane>
+                            <IconView glyph="STOP" glyphSize="20"/>
+                        </StackPane>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%main.addURL.tooltip" />
+                    </tooltip>
+                </Button>
+                <Button contentDisplay="GRAPHIC_ONLY" focusTraversable="false" mnemonicParsing="false" onAction="#download" styleClass="add-url-button">
+                    <graphic>
+                        <StackPane>
+                            <IconView glyph="DELETE" glyphSize="20"/>
+                        </StackPane>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%main.addURL.tooltip" />
+                    </tooltip>
+                </Button>
+    </children>
+</HBox>

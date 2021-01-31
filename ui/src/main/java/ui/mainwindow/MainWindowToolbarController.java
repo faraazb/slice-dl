@@ -15,39 +15,39 @@ import ui.download.Download;
 public class MainWindowToolbarController {
 
     private static final Logger LOG = LoggerFactory.getLogger(FontLoader.class);
-
-    @FXML
-    private TextField urlField;
-
-    private final BooleanProperty downloadButtonDisabled = new SimpleBooleanProperty(false);
-
-    @FXML
-    public void initialize() {
-        downloadButtonDisabled.bind(urlField.textProperty().isEmpty());
-    }
+//
+//    @FXML
+//    private TextField urlField;
+//
+//    private final BooleanProperty downloadButtonDisabled = new SimpleBooleanProperty(false);
+//
+//    @FXML
+//    public void initialize() {
+//        downloadButtonDisabled.bind(urlField.textProperty().isEmpty());
+//    }
 
     public void download() {
         try {
             Download downloadWindow = new Download();
             downloadWindow.show();
         } catch (Exception e) {
-            LOG.debug("Download Options had a problem!");
+            LOG.debug("Download Options:" + e.getMessage());
         }
     }
 
 
 //    Getter-Setter for downloadButtonDisabled
-    public boolean isDownloadButtonDisabled() {
-        return downloadButtonDisabled.get();
-    }
-
-    public BooleanProperty downloadButtonDisabledProperty() {
-        return downloadButtonDisabled;
-    }
-
-    public void setDownloadButtonDisabled(boolean downloadButtonDisabled) {
-        this.downloadButtonDisabled.set(downloadButtonDisabled);
-    }
+//    public boolean isDownloadButtonDisabled() {
+//        return downloadButtonDisabled.get();
+//    }
+//
+//    public BooleanProperty downloadButtonDisabledProperty() {
+//        return downloadButtonDisabled;
+//    }
+//
+//    public void setDownloadButtonDisabled(boolean downloadButtonDisabled) {
+//        this.downloadButtonDisabled.set(downloadButtonDisabled);
+//    }
 
 
 }

@@ -9,43 +9,79 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Spinner?>
 
-
+<?import ui.common.TimeSpinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.control.Tooltip?>
+<?import ui.common.IconView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.text.Text?>
 <StackPane xmlns:fx="http://javafx.com/fxml"
            xmlns="http://javafx.com/javafx"
-           maxHeight="170.0"
-           maxWidth="400.0"
-           minHeight="170.0"
-           minWidth="400.0"
-           prefHeight="170.0"
-           prefWidth="400.0" >
+           fx:controller="ui.download.DownloadController"
+           fx:id="download"
+           styleClass="download-options"
+           maxHeight="210.0"
+           maxWidth="420.0"
+           minHeight="210.0"
+           minWidth="420.0"
+           prefHeight="210.0"
+           prefWidth="420.0" >
     <children>
         <VBox prefHeight="200.0" prefWidth="100.0">
             <children>
                 <HBox alignment="CENTER_LEFT" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" spacing="10.0">
                     <children>
                         <Label text="URL:" />
-                        <TextField HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="url" HBox.hgrow="ALWAYS" />
                     </children>
                 </HBox>
                 <HBox alignment="CENTER_LEFT" layoutX="22.0" layoutY="16.0" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" spacing="10.0">
                     <children>
-                        <Label text="Output Format:" />
-                        <ComboBox prefWidth="100.0" />
+                        <Label text="Name:" />
+                        <TextField fx:id="filename" HBox.hgrow="SOMETIMES" />
+                        <Label text="Format:" />
+                        <ComboBox prefWidth="50.0" />
                     </children>
                 </HBox>
+                <HBox alignment="CENTER_LEFT" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" spacing="10.0">
+                    <children>
+                        <Label text="Directory:" minWidth="60" prefWidth="60"/>
+                        <ScrollPane prefHeight="35" maxHeight="35" minHeight="35" fitToHeight="true" HBox.hgrow="ALWAYS">
+                            <TextFlow >
+                                <Text fx:id="directory" />
+                            </TextFlow>
+                        </ScrollPane>
+<!--                        <TextArea fx:id="directory" maxHeight="15" HBox.hgrow="ALWAYS" text="Choose a Directory" wrapText="false" disable="true"/>-->
+                        <Button contentDisplay="GRAPHIC_ONLY" focusTraversable="false" mnemonicParsing="false" onAction="#chooseDirectory" styleClass="icon-button">
+                            <graphic>
+                                <StackPane>
+                                    <IconView glyph="FOLDER_OPEN" glyphSize="18"/>
+                                </StackPane>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="%main.addURL.tooltip" />
+                            </tooltip>
+                        </Button>
+                    </children>
+                </HBox>
+<!--                <Spinner fx:id="startTime" />-->
                 <HBox alignment="CENTER_LEFT" layoutX="22.0" layoutY="16.0" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" spacing="10.0">
                     <children>
                         <Label prefHeight="17.0" prefWidth="38.0" text="Start:" />
-                        <TextField HBox.hgrow="ALWAYS" />
+                        <TimeSpinner fx:id="start" />
+<!--                        <TextField HBox.hgrow="ALWAYS" />-->
                         <Label layoutX="10.0" layoutY="22.0" prefHeight="17.0" prefWidth="33.0" text="End:" />
-                        <TextField layoutX="44.0" layoutY="18.0" />
+                        <TimeSpinner fx:id="end" />
+<!--                        <TextField layoutX="44.0" layoutY="18.0" />-->
                     </children>
                 </HBox>
                 <ButtonBar prefHeight="40.0" prefWidth="200.0">
                     <buttons>
-                        <Button mnemonicParsing="false" text="Download" />
-                        <Button mnemonicParsing="false" text="Cancel" />
+                        <Button mnemonicParsing="false" text="Download" disable="${controller.downloadButtonDisabled}" />
+                        <Button mnemonicParsing="false" text="Cancel" cancelButton="true" />
                     </buttons>
                 </ButtonBar>
             </children>
